@@ -1,9 +1,9 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.config: config
-    ~/.spacemacs: spacemacs
+    ~/.gitconfig: .gitconfig
+    ~/.config: .config
+    ~/.spacemacs: .spacemacs
 
 - shell:
   - git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
