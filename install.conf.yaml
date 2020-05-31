@@ -2,6 +2,7 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.config: config
     ~/.spacemacs: spacemacs
 
 - shell:
