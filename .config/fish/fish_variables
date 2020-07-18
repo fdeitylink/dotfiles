@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export DISPLAY:172\x2e23\x2e224\x2e1\x3a0\x2e0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export VISUAL:emacs
 SETUVAR __fish_initialized:3100
