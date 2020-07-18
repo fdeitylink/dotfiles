@@ -60,3 +60,7 @@
 (use-package! doom-modeline
   :custom
   (doom-modeline-indent-info t))
+
+(use-package! treemacs
+  :custom
+  (treemacs-git-mode 'extended))
