@@ -1,5 +1,5 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: .gitconfig
-    ~/.config: .config
+    ~/.gitconfig: gitconfig
+    ~/.config: config
