@@ -3,6 +3,7 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.config: config
+    ~/.lein: lein
 
 - shell:
   - git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
