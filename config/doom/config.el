@@ -61,6 +61,12 @@
   :custom
   (doom-modeline-indent-info t))
 
+(use-package! nyan-mode
+  :custom
+  (nyan-animate-nyancat t)
+  (nyan-wavy-trail t)
+  (nyan-mode t))
+
 (use-package! treemacs
   :custom
   (treemacs-git-mode 'extended))
