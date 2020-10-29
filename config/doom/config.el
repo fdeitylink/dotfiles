@@ -70,3 +70,5 @@
 (use-package! treemacs
   :custom
   (treemacs-git-mode 'extended))
+
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
