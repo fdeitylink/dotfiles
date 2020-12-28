@@ -65,7 +65,8 @@
   :custom
   (nyan-animate-nyancat t)
   (nyan-wavy-trail t)
-  (nyan-mode t))
+  :config
+  (nyan-mode))
 
 (use-package! treemacs
   :custom
