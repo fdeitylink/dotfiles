@@ -70,6 +70,7 @@
 
 (use-package! treemacs
   :custom
-  (treemacs-git-mode 'extended))
+  (treemacs-git-mode 'extended)
+  (treemacs-follow-mode t))
 
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
