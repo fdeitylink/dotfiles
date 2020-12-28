@@ -71,6 +71,7 @@
 (use-package! treemacs
   :custom
   (treemacs-git-mode 'extended)
-  (treemacs-follow-mode t))
+  (treemacs-follow-mode t)
+  (treemacs-missing-project-action 'remove))
 
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
