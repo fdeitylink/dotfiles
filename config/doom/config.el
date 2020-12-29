@@ -69,9 +69,10 @@
   (nyan-mode))
 
 (use-package! treemacs
-  :custom
+  :config
   (treemacs-git-mode 'extended)
   (treemacs-follow-mode t)
+  :custom
   (treemacs-missing-project-action 'remove))
 
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
