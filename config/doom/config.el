@@ -61,6 +61,8 @@
   :custom
   (doom-modeline-indent-info t))
 
+(display-time)
+
 (use-package! nyan-mode
   :custom
   (nyan-animate-nyancat t)
