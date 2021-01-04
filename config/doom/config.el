@@ -67,6 +67,7 @@
   :custom
   (nyan-animate-nyancat t)
   (nyan-wavy-trail t)
+  (nyan-minimum-window-width 128)
   :config
   (nyan-mode))
 
