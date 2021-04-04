@@ -3,7 +3,6 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.config: config
-    ~/.lein: lein
 
 - shell:
   - source install-doom.fish && install-doom
