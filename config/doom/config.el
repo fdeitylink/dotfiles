@@ -78,4 +78,8 @@
   (treemacs-git-mode 'extended)
   (treemacs-follow-mode t))
 
+(use-package! straight
+  :custom
+  (straight-vc-git-default-protocol 'ssh))
+
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
