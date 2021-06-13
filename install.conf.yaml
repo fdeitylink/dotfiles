@@ -3,6 +3,7 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.config: config
+    ~/qmk_firmware/keyboards/planck/keymaps/fdeitylink: qmk_firmware/keyboards/planck/keymaps/fdeitylink
 
 - shell:
   - source install-doom.fish && install-doom
