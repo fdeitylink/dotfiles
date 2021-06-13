@@ -8,4 +8,4 @@
 - shell:
   - source install-doom.fish && install-doom
   - source install-qmk.fish && install-qmk
-  - curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish && fisher
+  - curl -sL https://git.io/fisher | source && fisher update
