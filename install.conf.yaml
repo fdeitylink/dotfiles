@@ -3,9 +3,11 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.config: config
-    ~/qmk_firmware/keyboards/planck/keymaps/fdeitylink: qmk_firmware/keyboards/planck/keymaps/fdeitylink
 
 - shell:
   - source install-doom.fish && install-doom
   - source install-qmk.fish && install-qmk
   - curl -sL https://git.io/fisher | source && fisher update
+
+- link:
+    ~/qmk_firmware/keyboards/planck/keymaps/fdeitylink: qmk_firmware/keyboards/planck/keymaps/fdeitylink
