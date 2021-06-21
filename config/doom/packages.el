@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 (package! nyan-mode)
+
+(package! elcord)
