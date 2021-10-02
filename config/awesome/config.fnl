@@ -12,7 +12,6 @@
 (local beautiful (require "beautiful"))
 ;; Notification library
 (local naughty (require "naughty"))
-(local menubar (require "menubar"))
 (local hotkeys-popup (require "awful.hotkeys_popup"))
 
 ;; Error handling
@@ -58,20 +57,6 @@
                            ;; awful.layout.suit.corner.sw
                            ;; awful.layout.suit.corner.se
 
-;; Menu
-(local awesome-menu [["hotkeys" #(hotkeys-popup.show_help nil (awful.screen.focused))]
-                     ["manual" (.. terminal " -e man awesome")]
-                     ["edit config" (.. editor-cmd " " awesome.conffile)]
-                     ["restart" awesome.restart]
-                     ["quit" awesome.quit]])
-
-(local main-menu (awful.menu {:items [["awesome" awesome-menu beautiful.awesome_icon]
-                                      ["open terminal" terminal]]}))
-
-;; Menubar configuration
-;; Set the terminal for applications that require it
-(set menubar.utils.terminal terminal)
-
 (fn set-wallpaper [s]
   ;; Wallpaper
   (gears.wallpaper.maximized
@@ -97,7 +82,6 @@
                         (awful.button [] 1 #(if (= $1 client.focus)
                                                 (set $1.minimized true)
                                                 ($1:emit_signal "request::activate" "tasklist" {:raise true})))
-                        (awful.button [] 3 #(awful.menu.client_list {:theme {:width 250}}))
                         (awful.button [] 4 #(awful.client.focus.byidx 1))
                         (awful.button [] 5 #(awful.client.focus.byidx -1)))]
   ;; Create a wibox for each screen and add it
@@ -134,8 +118,7 @@
      (set s.wibox (awful.wibar {:position "top" :screen s}))
      (s.wibox:setup {:layout wibox.layout.align.horizontal
                      1 {:layout wibox.layout.fixed.horizontal
-                        1 (awful.widget.launcher {:image beautiful.awesome_icon
-                                                  :menu main-menu})
+                        1 (wibox.widget.imagebox beautiful.awesome_icon)
                         2 s.taglist
                         3 s.promptbox}
                      2 s.tasklist
@@ -160,8 +143,6 @@
                              {:description "focus next by index" :group "client"})
                   (awful.key [modkey] "k" #(awful.client.focus.byidx -1)
                              {:description "focus previous by index" :group "client"})
-                  (awful.key [modkey] "w" main-menu.show
-                             {:description "show main menu" :group "awesome"})
 
                   ;; Layout manipulation
                   (awful.key [modkey "Shift"] "j" #(awful.client.swap.byidx 1)
@@ -219,10 +200,6 @@
                                                               :history_path (.. (awful.util.get_cache_dir) "/history_eval")})
                              {:description "lua execute prompt" :group "awesome"})
 
-                  ;; Menubar
-                  (awful.key [modkey] "p" menubar.show
-                             {:description "show the menubar" :group "launcher"})
-
                   ;; Volume keys
                   (awful.key [] :XF86AudioLowerVolume #(awful.util.spawn "amixer -q -D pulse sset Master 5%-" false))
                   (awful.key [] :XF86AudioRaiseVolume #(awful.util.spawn "amixer -q -D pulse sset Master 5%+" false))
@@ -264,7 +241,6 @@
 
 ;; Mouse bindings
 (root.buttons (gears.table.join
-               (awful.button [] 3 main-menu.toggle)
                (awful.button [] 4 awful.tag.viewnext)
                (awful.button [] 5 awful.tag.viewprev)))
 
