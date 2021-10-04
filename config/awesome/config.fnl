@@ -123,10 +123,9 @@
                         3 s.promptbox}
                      2 s.tasklist
                      3 {:layout wibox.layout.fixed.horizontal
-                        1 (awful.widget.keyboardlayout)
-                        2 (wibox.widget.systray)
-                        3 (wibox.widget.textclock "%Y-%m-%d %I:%M:%S %p" 1)
-                        4 s.layoutbox}}))))
+                        1 (wibox.widget.systray)
+                        2 (wibox.widget.textclock "%Y-%m-%d %I:%M:%S %p" 1)
+                        3 s.layoutbox}}))))
 
 ;; Key bindings
 (let [globalkeys (gears.table.join
