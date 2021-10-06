@@ -37,7 +37,7 @@
 (beautiful.init (.. (gears.filesystem.get_themes_dir) "xresources/theme.lua"))
 
 (local terminal "kitty")
-(local editor (or (os.getenv "EDITOR") "nano"))
+(local editor (os.getenv "EDITOR"))
 (local editor-cmd (.. terminal " -e " editor))
 (local modkey "Mod4")
 (set awful.layout.layouts [awful.layout.suit.floating
