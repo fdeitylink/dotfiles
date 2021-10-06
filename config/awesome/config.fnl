@@ -162,6 +162,8 @@
                   ;; Standard program
                   (awful.key [modkey] "Return" #(awful.spawn terminal)
                              {:description "open a terminal" :group "launcher"})
+                  (awful.key [modkey "Control"] "e" #(awful.spawn (.. editor-cmd " " (gears.filesystem.get_configuration_dir) "config.fnl"))
+                             {:description "edit config" :group "awesome"})
                   (awful.key [modkey "Control"] "r" awesome.restart
                              {:description "reload awesome" :group "awesome"})
                   (awful.key [modkey "Control"] "q" awesome.quit
