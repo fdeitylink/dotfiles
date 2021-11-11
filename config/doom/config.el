@@ -85,5 +85,3 @@
 (use-package! elcord
   :config
   (elcord-mode))
-
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
