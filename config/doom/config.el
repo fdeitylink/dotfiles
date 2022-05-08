@@ -107,3 +107,7 @@
 (use-package! elcord
   :config
   (elcord-mode))
+
+(use-package! cider
+  :custom
+  (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow"))
