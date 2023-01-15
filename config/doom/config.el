@@ -96,8 +96,8 @@
 (use-package! treemacs
   :custom
   (treemacs-missing-project-action 'remove)
+  (+treemacs-git-mode 'extended)
   :config
-  (treemacs-git-mode 'extended)
   (treemacs-follow-mode t))
 
 (use-package! straight
