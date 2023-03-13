@@ -3,10 +3,7 @@
 	email = 11952260+fdeitylink@users.noreply.github.com
 [core]
 	editor = nvim
-[credential]
-	helper = cache
 [pull]
 	rebase = false
-
 [init]
 	defaultBranch = master
