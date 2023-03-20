@@ -105,4 +105,5 @@
 
 (use-package! cider
   :custom
-  (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow"))
+  (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
+  (nrepl-use-ssh-fallback-for-remote-hosts t))
