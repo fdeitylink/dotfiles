@@ -3,7 +3,7 @@ set -gx VISUAL emacs
 
 set -gx GPG_TTY (tty)
 
-set fish_user_paths ~/.local/bin ~/.emacs.d/bin
+set fish_user_paths ~/.local/bin ~/.config/emacs/bin
 
 alias vim nvim
 alias vi nvim
