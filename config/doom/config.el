@@ -3,6 +3,39 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+(use-package! doom-modeline
+  :custom
+  (doom-modeline-indent-info t))
+
+(display-time)
+
+(use-package! nyan-mode
+  :custom
+  (nyan-animate-nyancat t)
+  (nyan-wavy-trail t)
+  (nyan-minimum-window-width 128)
+  :config
+  (nyan-mode))
+
+(use-package! treemacs
+  :custom
+  (treemacs-missing-project-action 'remove)
+  (+treemacs-git-mode 'extended)
+  :config
+  (treemacs-follow-mode t))
+
+(use-package! straight
+  :custom
+  (straight-vc-git-default-protocol 'ssh))
+
+(use-package! elcord
+  :config
+  (elcord-mode))
+
+(use-package! cider
+  :custom
+  (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
+  (nrepl-use-ssh-fallback-for-remote-hosts t))
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
@@ -74,37 +107,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-(use-package! doom-modeline
-  :custom
-  (doom-modeline-indent-info t))
-
-(display-time)
-
-(use-package! nyan-mode
-  :custom
-  (nyan-animate-nyancat t)
-  (nyan-wavy-trail t)
-  (nyan-minimum-window-width 128)
-  :config
-  (nyan-mode))
-
-(use-package! treemacs
-  :custom
-  (treemacs-missing-project-action 'remove)
-  (+treemacs-git-mode 'extended)
-  :config
-  (treemacs-follow-mode t))
-
-(use-package! straight
-  :custom
-  (straight-vc-git-default-protocol 'ssh))
-
-(use-package! elcord
-  :config
-  (elcord-mode))
-
-(use-package! cider
-  :custom
-  (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
-  (nrepl-use-ssh-fallback-for-remote-hosts t))
