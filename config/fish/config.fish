@@ -5,11 +5,11 @@ set -gx GPG_TTY (tty)
 
 set fish_user_paths ~/.local/bin ~/.config/emacs/bin
 
-alias vim nvim
-alias vi nvim
-alias ls exa
-alias tree 'exa -T'
-alias cat bat
+abbr vim nvim
+abbr vi nvim
+abbr ls exa
+abbr tree 'exa -T'
+abbr cat bat
 
 fish_vi_key_bindings
 fish_config theme choose 'Dracula Official'
