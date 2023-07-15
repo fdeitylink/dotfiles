@@ -10,6 +10,7 @@ abbr vi nvim
 abbr ls exa
 abbr tree 'exa -T'
 abbr cat bat
+abbr less 'bat --paging always'
 
 fish_vi_key_bindings
 fish_config theme choose 'Dracula Official'
