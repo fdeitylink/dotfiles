@@ -1,4 +1,4 @@
-set -gx EDITOR vim
+set -gx EDITOR nvim
 set -gx VISUAL emacs
 
 set -gx GPG_TTY (tty)
