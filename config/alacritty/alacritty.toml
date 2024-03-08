@@ -1,0 +1,4 @@
+import = ["/home/eloise/.config/alacritty/dracula/dracula.toml"]
+
+[font]
+size = 9.0

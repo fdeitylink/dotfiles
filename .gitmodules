@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	update = merge
+[submodule "config/alacritty/alacritty"]
+	path = config/alacritty/dracula
+	url = git@github.com:dracula/alacritty.git
