@@ -7,8 +7,8 @@ set fish_user_paths ~/.local/bin ~/.config/emacs/bin
 
 abbr vim nvim
 abbr vi nvim
-abbr ls exa
-abbr tree 'exa -T'
+abbr ls eza
+abbr tree 'eza -T'
 abbr cat bat
 abbr less 'bat --paging always'
 
