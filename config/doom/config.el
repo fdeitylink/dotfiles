@@ -4,12 +4,14 @@
 ;; sync' after modifying this file!
 
 (use-package! doom-modeline
+  :defer t
   :custom
   (doom-modeline-indent-info t))
 
 (display-time)
 
 (use-package! nyan-mode
+  :after doom-modeline
   :custom
   (nyan-animate-nyancat t)
   (nyan-wavy-trail t)
@@ -18,6 +20,7 @@
   (nyan-mode))
 
 (use-package! treemacs
+  :defer t
   :custom
   (treemacs-missing-project-action 'remove)
   (+treemacs-git-mode 'extended)
@@ -33,6 +36,7 @@
   (elcord-mode))
 
 (use-package! cider
+  :defer t
   :custom
   (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
   (nrepl-use-ssh-fallback-for-remote-hosts t))
