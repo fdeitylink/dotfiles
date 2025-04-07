@@ -31,6 +31,11 @@
   :config
   (treemacs-follow-mode t))
 
+(use-package! lsp-ui
+  :defer t
+  :custom
+  (lsp-ui-sideline-enable nil))
+
 (use-package! straight
   :custom
   (straight-vc-git-default-protocol 'ssh))
