@@ -19,6 +19,10 @@
   :config
   (nyan-mode))
 
+(use-package! beacon
+  :config
+  (beacon-mode))
+
 (use-package! treemacs
   :defer t
   :custom
