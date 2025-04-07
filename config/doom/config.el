@@ -48,6 +48,11 @@
   (cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
   (nrepl-use-ssh-fallback-for-remote-hosts t))
 
+(use-package! rust-mode
+  :defer t
+  :custom
+  (lsp-rust-analyzer-cargo-watch-command "clippy"))
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Eloise Christian"
