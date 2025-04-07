@@ -58,6 +58,23 @@
   :custom
   (haskell-interactive-popup-errors nil))
 
+(when (locate-file "proverif" load-path load-suffixes)
+  (setq auto-mode-alist (append '(("\\.horn$" . proverif-horn-mode)
+                                  ("\\.horntype$" . proverif-horntype-mode)
+                                  ("\\.pv[l]?$" . proverif-pv-mode)
+                                  ("\\.pi$" . proverif-pi-mode))
+                                auto-mode-alist))
+  (autoload 'proverif-horn-mode "proverif" "Major mode for editing ProVerif code." t)
+  (autoload 'proverif-horntype-mode "proverif" "Major mode for editing ProVerif code." t)
+  (autoload 'proverif-pv-mode "proverif" "Major mode for editing ProVerif code." t)
+  (autoload 'proverif-pi-mode "proverif" "Major mode for editing ProVerif code." t)
+
+  (add-hook! (proverif-horn-mode proverif-horntype-mode proverif-pv-mode proverif-pi-mode)
+    (unless (file-exists-p! (or "makefile" "Makefile"))
+      (setq-local compile-command
+                  (concat "proverif "
+                          (if buffer-file-name (shell-quote-argument buffer-file-name)))))))
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Eloise Christian"
