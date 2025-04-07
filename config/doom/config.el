@@ -53,6 +53,11 @@
   :custom
   (lsp-rust-analyzer-cargo-watch-command "clippy"))
 
+(use-package! haskell-mode
+  :defer t
+  :custom
+  (haskell-interactive-popup-errors nil))
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Eloise Christian"
