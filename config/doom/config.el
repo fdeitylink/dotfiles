@@ -36,6 +36,9 @@
   (straight-vc-git-default-protocol 'ssh))
 
 (use-package! elcord
+  :if (or (executable-find "discord")
+          (executable-find "discord-ptb")
+          (executable-find "discord-canary"))
   :config
   (elcord-mode))
 
