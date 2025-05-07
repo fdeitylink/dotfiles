@@ -1,5 +1,6 @@
 set -gx EDITOR nvim
 set -gx VISUAL emacs
+set -gx PAGER 'bat --paging always'
 
 set -gx GPG_TTY (tty)
 
@@ -10,7 +11,7 @@ abbr vi nvim
 abbr ls eza
 abbr tree 'eza -T'
 abbr cat bat
-abbr less 'bat --paging always'
+abbr less $PAGER
 
 fish_vi_key_bindings
 fish_config theme choose 'Dracula Official'
