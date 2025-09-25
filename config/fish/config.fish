@@ -4,7 +4,7 @@ set -gx PAGER 'bat --paging always'
 
 set -gx GPG_TTY (tty)
 
-set fish_user_paths ~/.local/bin ~/.config/emacs/bin
+set fish_user_paths ~/.local/bin ~/.config/emacs/bin ~/.cargo/bin
 
 abbr vim nvim
 abbr vi nvim
