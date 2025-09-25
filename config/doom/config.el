@@ -41,6 +41,10 @@
   :config
   (lsp-treemacs-sync-mode))
 
+(use-package! eglot
+  :defer t
+  :hook (eglot-managed-mode . (lambda () (eglot-inlay-hints-mode -1))))
+
 (use-package! straight
   :custom
   (straight-vc-git-default-protocol 'ssh))
