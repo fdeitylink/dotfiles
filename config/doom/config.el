@@ -49,6 +49,9 @@
   :custom
   (straight-vc-git-default-protocol 'ssh))
 
+(if (featurep :system 'macos)
+    (setq ns-use-native-fullscreen t))
+
 (use-package! elcord
   :if (or (executable-find "discord")
           (executable-find "discord-ptb")
